@@ -23,7 +23,7 @@ num = 6; // Initialization
 ####  2. What is a Temporal Dead Zone?.
 ```javascript
 console.log(x); // undefined
-console.log(y); // ReferenceError: x is not defined
+console.log(y); // ReferenceError: y is not defined
 var x = 1;
 let y = 2;
 ```
