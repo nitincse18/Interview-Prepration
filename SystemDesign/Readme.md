@@ -57,7 +57,7 @@ Explain the role of CDNs and load balancers in improving website performance.
 
 Compare and contrast HTTP, HTTPS, REST, and WebSockets.
 
-- [Week 1](Week1/README.md): Documentation for Week 1.
+## - Details Study [Week 1](Week1/README.md)
 ## Week 2: Architecture and System Components 
 
 ### Day 8-9: Microservices vs Monolithic Architecture
@@ -89,7 +89,7 @@ Explain the Singleton, Factory, Observer, Strategy, and Proxy design patterns.
 #### Distributed Systems
 
 Discuss the CAP theorem and consensus algorithms in distributed systems.
-- [Week 2](Week2/README.md): Documentation for Week 2.
+## - Details Study [Week 2](Week2/README.md)
 
 ## Week 3: Real-world System Design
 
@@ -123,7 +123,7 @@ Design an e-commerce system with a focus on transaction handling.
 
 How would you ensure real-time inventory management?
 
-- [Week 3](Week3/README.md)
+## - Details Study [Week 3](Week3/README.md)
 
 ## Week 4: Mock Interviews and Advanced Topics
 
@@ -155,5 +155,5 @@ Conduct mock interviews and practice different system design scenarios.
 
 Revise all key concepts covered over the past month and conduct a final mock interview.
 
-- [Week 4](Week4/README.md)
+## - Details Study [Week 4](Week4/README.md)
 **
