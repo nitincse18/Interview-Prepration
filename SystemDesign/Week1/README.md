@@ -20,8 +20,8 @@ Consistency:
 
 - Example: Ensuring Consistency in MongoDB Transactions:
 Use MongoDB's multi-document ACID transactions to ensure consistency across multiple operations.
-Example code:
 
+Example code:
 ```javascript
 const session = client.startSession();
 session.startTransaction();
