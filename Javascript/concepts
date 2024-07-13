@@ -5,3 +5,53 @@
 - Garbage Collection:
     => Reference-counting garbage collection.
     => Mark-and-sweep algorithm.
+
+
+## Polyfills for bind method
+```javascript
+let name = {
+  firstName: 'Nitin',
+  lastName: 'Kumar'
+}
+let printName = function (hometown, state) {
+  console.log(this.firstName + ' ' + this.lastName + ' from ' + hometown + ', '+ state)
+}
+
+let printMyName = printName.bind(name, 'Muzaffarpur');
+printMyName('Bihar');
+
+// Creating Own bind method
+Function.prototype.mybind = function (...args) {
+  let obj = this,
+  params = args.slice(1)
+  return function (...args2) {
+    obj.apply(args[0], [...params,...args2])
+  }
+}
+let printMyName2 = printName.mybind(name, 'Muzaffarpur');
+printMyName2('Bihar');
+
+```
+
+## Function Curring
+### By using bind method
+```javascript
+let multiply = function (x, y) {
+    console.log(x* y);
+}
+
+let multiplyByTwo = multiply.bind(this, 2)
+multiplyByTwo(3)
+```
+
+### By using closour method
+```javascript
+let multiply = function (x) {
+    return function (y) {
+        console.log(x* y);
+    }
+}
+
+let multiplyByTwo = multiply.bind(this, 2)
+multiplyByTwo
+```

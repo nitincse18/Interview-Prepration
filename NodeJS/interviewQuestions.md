@@ -104,7 +104,6 @@ Callbacks are a fundamental concept in Node.js and are used extensively in many 
 
 ### 4. What are Promises in Node.js and how do they work?
 In Node.js, a Promise is an object that represents the eventual completion or failure of an asynchronous operation and allows you to handle the 
-
 result of that operation asynchronously.
 
 A Promise has three possible states:
