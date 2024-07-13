@@ -1,23 +1,19 @@
-**Plan to Prepare for System Design Interview
-
-Week 1: Fundamentals and Basics
-Day 1-2: Basic Concepts of System Design
-Scalability:
-
-Vertical Scaling: Enhancing the capacity of a single server by adding more resources (CPU, RAM, storage). Suitable for limited increase in load but has physical and cost limitations.
-Horizontal Scaling: Adding more servers to distribute the load. More cost-effective and scalable, especially for large-scale applications.
-Latency: The delay before a transfer of data begins following an instruction for its transfer. Important to minimize for better user experience.
-
-Throughput: The amount of data processed in a given amount of time. Higher throughput indicates better performance.
-
-Consistency: Ensures that all nodes in a distributed system reflect the same data at the same time. Critical in financial systems where data accuracy is crucial.
-
-Availability: The system's ability to remain operational and accessible over a period of time. Measured by uptime percentages.
-
-Partition Tolerance: The system continues to operate despite network partitions that separate nodes from each other.
-# Practice Questions
+# Plan to Prepare for System Design Interview
 
 ## Week 1: Fundamentals of System Design
+### Day 1-2: Basic Concepts of System Design
+
+- Scalability:
+    - Vertical Scaling: Enhancing the capacity of a single server by adding more resources (CPU, RAM, storage). Suitable for limited increase in load but has physical and cost limitations.
+    - Horizontal Scaling: Adding more servers to distribute the load. More cost-effective and scalable, especially for large-scale applications.
+- Latency: The delay before a transfer of data begins following an instruction for its transfer. Important to minimize for better user experience.
+- Throughput: The amount of data processed in a given amount of time. Higher throughput indicates better performance.
+- Consistency: Ensures that all nodes in a distributed system reflect the same data at the same time. Critical in financial systems where data accuracy is crucial.
+- Availability: The system's ability to remain operational and accessible over a period of time. Measured by uptime percentages.
+- Partition Tolerance: The system continues to operate despite network partitions that separate nodes from each other.
+# Practice Questions
+
+
 
 ### Day 1-2: Scaling and Databases
 
