@@ -67,6 +67,7 @@ Use RabbitMQ or Kafka for reliable message queuing and event streaming to ensure
 - Limited by Hardware: There is a physical limit to how much you can upgrade a single machine.
 - Single Point of Failure: If the server goes down, the entire system can be affected.
 - Cost: Upgrading to more powerful hardware can be expensive.
+
 Example:
 Upgrading a server's RAM from 16GB to 64GB to handle more concurrent users in a Node.js application.
 
@@ -80,49 +81,58 @@ Upgrading a server's RAM from 16GB to 64GB to handle more concurrent users in a 
 #### Disadvantages:
 - Complexity: More complex to implement and manage, requiring load balancers and distributed systems management.
 - Consistency: Ensuring data consistency across multiple machines can be challenging.
+
 Example:
 Adding more instances of a Node.js application behind a load balancer to handle increased traffic.
 
 ### Q. How do you ensure consistency in a distributed system?
 
-- Definition: Ensuring that all nodes in a distributed system reflect the same data at the same time.
+    Definition: Ensuring that all nodes in a distributed system reflect the same data at the same time.
+
 Techniques to Ensure Consistency:
 
-### Distributed Transactions:
+#### Distributed Transactions:
 Use distributed transactions to ensure atomicity and consistency across multiple nodes.
 
 Example:
 Two-phase commit protocol (2PC) where a coordinator ensures that all participating nodes either commit or abort a transaction.
 
-- Data Replication:
-Replicate data across multiple nodes to ensure availability and fault tolerance while maintaining consistency.
+#### Data Replication:
+- Replicate data across multiple nodes to ensure availability and fault tolerance while maintaining consistency.
 
-Example:
-MongoDB replica sets, where data is replicated across a primary node and secondary nodes.
+- Example:
+    - MongoDB replica sets, where data is replicated across a primary node and secondary nodes.
 
 #### Consistency Models:
 - Strong Consistency: Ensures that all reads return the most recent write. Often achieved at the expense of availability and latency.
+
 Example: Use of quorum reads and writes in systems like Cassandra.
 - Eventual Consistency: Ensures that all nodes will eventually become consistent, suitable for high availability and partition tolerance.
+
 Example: DynamoDB's eventual consistency model.
+
 - Causal Consistency: Ensures that operations that are causally related are seen by all nodes in the same order.
 Example: Use of vector clocks to track causality in distributed databases.
 
-- Consensus Algorithms:
-Use consensus algorithms to ensure that all nodes agree on the state of the system.
+#### Consensus Algorithms:
+- Use consensus algorithms to ensure that all nodes agree on the state of the system.
+
 Example:
 Paxos or Raft algorithms used in distributed systems to achieve consensus on data values or configurations.
 
-- Conflict Resolution:
+#### Conflict Resolution:
 Implement conflict resolution strategies to handle data conflicts that arise from concurrent updates.
-Example:
-Last-write-wins (LWW) strategy where the latest write based on a timestamp is considered the valid one.
-Application-specific conflict resolution logic to merge data changes.
 
-- Quorum-Based Approaches:
+Example:
+- Last-write-wins (LWW) strategy where the latest write based on a timestamp is considered the valid one.
+- Application-specific conflict resolution logic to merge data changes.
+
+#### Quorum-Based Approaches:
 Use quorum-based approaches to ensure a minimum number of nodes agree on a read or write operation.
+
 Example:
 In a system with three replicas, requiring two out of three nodes to acknowledge a write (write quorum) ensures consistency.
+
 Example: Ensuring Consistency in MongoDB:
 
 ```javascript
