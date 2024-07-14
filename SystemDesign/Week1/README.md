@@ -3,23 +3,23 @@
 
 ## Scalability:
 - Example: Horizontal Scaling in MongoDB:
-Use MongoDB Atlas to create a sharded cluster.
-Distribute data across multiple shards to handle increased read/write operations.
-Configure each shard to replicate data for high availability.
+ - Use MongoDB Atlas to create a sharded cluster.
+ - Distribute data across multiple shards to handle increased read/write operations.
+ - Configure each shard to replicate data for high availability.
 
 ## Latency:
 - Example: Reducing Latency in a React Application:
-Use code-splitting and lazy loading to reduce initial load time.
-Optimize component rendering and avoid unnecessary re-renders using React’s useMemo and useCallback.
+ - Use code-splitting and lazy loading to reduce initial load time.
+ - Optimize component rendering and avoid unnecessary re-renders using React’s useMemo and useCallback.
 
 ## Throughput:
 - Example: Increasing Throughput in an Express.js Server:
-Use Node.js clustering to take advantage of multi-core systems.
-Implement load balancing with NGINX to distribute incoming requests across multiple instances.
+ - Use Node.js clustering to take advantage of multi-core systems.
+ - Implement load balancing with NGINX to distribute incoming requests across multiple instances.
 
 ## Consistency:
 - Example: Ensuring Consistency in MongoDB Transactions:
-Use MongoDB's multi-document ACID transactions to ensure consistency across multiple operations.
+ - Use MongoDB's multi-document ACID transactions to ensure consistency across multiple operations.
 
 Example code:
 ```javascript
@@ -36,8 +36,9 @@ try {
 }
 ```
 ## Availability:
-Example: High Availability with MongoDB Replica Sets:
-Set up a MongoDB replica set with one primary and multiple secondary nodes.
+- Example: High Availability with MongoDB Replica Sets:
+ - Set up a MongoDB replica set with one primary and multiple secondary nodes.
+
 Example configuration:
 ```javascript
 rs.initiate({
@@ -50,8 +51,9 @@ rs.initiate({
 });
 ```
 ## Partition Tolerance:
-Example: Handling Network Partitions in a Distributed MERN Application:
-Use RabbitMQ or Kafka for reliable message queuing and event streaming to ensure system operability during partitions.
+- Example: 
+ - Handling Network Partitions in a Distributed MERN Application:
+ - Use RabbitMQ or Kafka for reliable message queuing and event streaming to ensure system operability during partitions.
 
 ## Practice Questions:
 ### Q. Explain the differences between vertical and horizontal scaling.
@@ -69,7 +71,7 @@ Use RabbitMQ or Kafka for reliable message queuing and event streaming to ensure
 - Cost: Upgrading to more powerful hardware can be expensive.
 
 Example:
-Upgrading a server's RAM from 16GB to 64GB to handle more concurrent users in a Node.js application.
+ - Upgrading a server's RAM from 16GB to 64GB to handle more concurrent users in a Node.js application.
 
 ### Horizontal Scaling:
     Definition: Adding more machines (servers) to distribute the load across multiple devices.
@@ -82,20 +84,20 @@ Upgrading a server's RAM from 16GB to 64GB to handle more concurrent users in a 
 - Complexity: More complex to implement and manage, requiring load balancers and distributed systems management.
 - Consistency: Ensuring data consistency across multiple machines can be challenging.
 
-Example:
-Adding more instances of a Node.js application behind a load balancer to handle increased traffic.
+- Example:
+ - Adding more instances of a Node.js application behind a load balancer to handle increased traffic.
 
 ### Q. How do you ensure consistency in a distributed system?
 
     Definition: Ensuring that all nodes in a distributed system reflect the same data at the same time.
 
-Techniques to Ensure Consistency:
+### Techniques to Ensure Consistency:
 
 #### Distributed Transactions:
 Use distributed transactions to ensure atomicity and consistency across multiple nodes.
 
-Example:
-Two-phase commit protocol (2PC) where a coordinator ensures that all participating nodes either commit or abort a transaction.
+- Example:
+ - Two-phase commit protocol (2PC) where a coordinator ensures that all participating nodes either commit or abort a transaction.
 
 #### Data Replication:
 - Replicate data across multiple nodes to ensure availability and fault tolerance while maintaining consistency.
@@ -106,19 +108,21 @@ Two-phase commit protocol (2PC) where a coordinator ensures that all participati
 #### Consistency Models:
 - Strong Consistency: Ensures that all reads return the most recent write. Often achieved at the expense of availability and latency.
 
-Example: Use of quorum reads and writes in systems like Cassandra.
+- Example: 
+ - Use of quorum reads and writes in systems like Cassandra.
+
 - Eventual Consistency: Ensures that all nodes will eventually become consistent, suitable for high availability and partition tolerance.
+- Example: DynamoDB's eventual consistency model.
+ - Causal Consistency: Ensures that operations that are causally related are seen by all nodes in the same order.
 
-Example: DynamoDB's eventual consistency model.
-
-- Causal Consistency: Ensures that operations that are causally related are seen by all nodes in the same order.
-Example: Use of vector clocks to track causality in distributed databases.
+- Example: 
+ - Use of vector clocks to track causality in distributed databases.
 
 #### Consensus Algorithms:
 - Use consensus algorithms to ensure that all nodes agree on the state of the system.
 
-Example:
-Paxos or Raft algorithms used in distributed systems to achieve consensus on data values or configurations.
+- Example:
+ - Paxos or Raft algorithms used in distributed systems to achieve consensus on data values or configurations.
 
 #### Conflict Resolution:
 Implement conflict resolution strategies to handle data conflicts that arise from concurrent updates.
@@ -130,10 +134,11 @@ Example:
 #### Quorum-Based Approaches:
 Use quorum-based approaches to ensure a minimum number of nodes agree on a read or write operation.
 
-Example:
-In a system with three replicas, requiring two out of three nodes to acknowledge a write (write quorum) ensures consistency.
+- Example:
+ - In a system with three replicas, requiring two out of three nodes to acknowledge a write (write quorum) ensures consistency.
 
-Example: Ensuring Consistency in MongoDB:
+- Example: 
+ - Ensuring Consistency in MongoDB:
 
 ```javascript
 const session = client.startSession();
@@ -154,8 +159,10 @@ This code snippet demonstrates using MongoDB transactions to ensure consistency 
 
 ## SQL vs NoSQL:
 
-Example: MongoDB for NoSQL:
-Store unstructured data, such as user profiles or product catalog, in MongoDB.
+- Example: 
+ - MongoDB for NoSQL:
+  Store unstructured data, such as user profiles or product catalog, in MongoDB.
+  
 Example:
 ```javascript
 const userSchema = new mongoose.Schema({
