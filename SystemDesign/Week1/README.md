@@ -57,11 +57,13 @@ Use RabbitMQ or Kafka for reliable message queuing and event streaming to ensure
 ### Q. Explain the differences between vertical and horizontal scaling.
 
 ### Vertical Scaling:
-- Definition: Adding more power (CPU, RAM, storage) to an existing machine to handle increased load.
-Advantages:
+    Definition: Adding more power (CPU, RAM, storage) to an existing machine to handle increased load.
+
+#### Advantages:
 - Simplicity: Easier to implement since it involves upgrading the existing server.
 - Reduced Maintenance: Fewer machines to manage and maintain.
-Disadvantages:
+
+#### Disadvantages:
 - Limited by Hardware: There is a physical limit to how much you can upgrade a single machine.
 - Single Point of Failure: If the server goes down, the entire system can be affected.
 - Cost: Upgrading to more powerful hardware can be expensive.
@@ -69,12 +71,13 @@ Example:
 Upgrading a server's RAM from 16GB to 64GB to handle more concurrent users in a Node.js application.
 
 ### Horizontal Scaling:
-- Definition: Adding more machines (servers) to distribute the load across multiple devices.
-Advantages:
+    Definition: Adding more machines (servers) to distribute the load across multiple devices.
+
+#### Advantages:
 - Scalability: Easier to scale out by adding more servers.
 - Redundancy: More machines provide redundancy, reducing the risk of a single point of failure.
 - Flexibility: Can use commodity hardware, making it cost-effective.
-Disadvantages:
+#### Disadvantages:
 - Complexity: More complex to implement and manage, requiring load balancers and distributed systems management.
 - Consistency: Ensuring data consistency across multiple machines can be challenging.
 Example:
@@ -93,6 +96,7 @@ Two-phase commit protocol (2PC) where a coordinator ensures that all participati
 
 - Data Replication:
 Replicate data across multiple nodes to ensure availability and fault tolerance while maintaining consistency.
+
 Example:
 MongoDB replica sets, where data is replicated across a primary node and secondary nodes.
 
