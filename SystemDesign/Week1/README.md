@@ -87,15 +87,16 @@ Techniques to Ensure Consistency:
 
 ### Distributed Transactions:
 Use distributed transactions to ensure atomicity and consistency across multiple nodes.
+
 Example:
 Two-phase commit protocol (2PC) where a coordinator ensures that all participating nodes either commit or abort a transaction.
-Data Replication:
 
+- Data Replication:
 Replicate data across multiple nodes to ensure availability and fault tolerance while maintaining consistency.
 Example:
 MongoDB replica sets, where data is replicated across a primary node and secondary nodes.
-Consistency Models:
 
+#### Consistency Models:
 - Strong Consistency: Ensures that all reads return the most recent write. Often achieved at the expense of availability and latency.
 Example: Use of quorum reads and writes in systems like Cassandra.
 - Eventual Consistency: Ensures that all nodes will eventually become consistent, suitable for high availability and partition tolerance.
