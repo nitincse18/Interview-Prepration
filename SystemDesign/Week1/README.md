@@ -135,7 +135,7 @@ Implement conflict resolution strategies to handle data conflicts that arise fro
 Use quorum-based approaches to ensure a minimum number of nodes agree on a read or write operation.
 
 - Example:
- - In a system with three replicas, requiring two out of three nodes to acknowledge a write (write quorum) ensures consistency.
+    - In a system with three replicas, requiring two out of three nodes to acknowledge a write (write quorum) ensures consistency.
 
 - Example: 
     - Ensuring Consistency in MongoDB:
