@@ -473,7 +473,7 @@ myFunction(); // Outputs: 'Hello, world!'
 ```
 ### 10. How do you optimize the performance of a Node.js application?
 #### Optimizing the performance of a Node.js application involves several strategies:
-1. Use Clustering: Node.js runs on a single thread, which means it doesn't take full advantage of multi-core systems by default. The cluster module allows you to create child processes (workers) that run simultaneously and share the same server port.
+**1. Use Clustering:** Node.js runs on a single thread, which means it doesn't take full advantage of multi-core systems by default. The cluster module allows you to create child processes (workers) that run simultaneously and share the same server port.
 
 ```javascript
 const cluster = require('cluster');
@@ -500,21 +500,21 @@ if (cluster.isMaster) {
 }
 ```
 
-2. Avoid Synchronous Code: Node.js is single-threaded, which means synchronous operations can block the entire server. Always use asynchronous APIs in your Node.js server.
+**2. Avoid Synchronous Code:** Node.js is single-threaded, which means synchronous operations can block the entire server. Always use asynchronous APIs in your Node.js server.
 
-3. Use Caching: Caching can greatly improve the performance by storing the result of expensive function calls and reusing the cached result when the same inputs occur again.
+**3. Use Caching:** Caching can greatly improve the performance by storing the result of expensive function calls and reusing the cached result when the same inputs occur again.
 
-4. Use Load Balancing: Load balancing helps to distribute the load among different servers, which can help to increase the application performance.
+**4. Use Load Balancing:** Load balancing helps to distribute the load among different servers, which can help to increase the application performance.
 
-5. Use a Reverse Proxy: Using a reverse proxy like Nginx can help to manage load balancing, serve static files, SSL processing, and more.
+**5. Use a Reverse Proxy:** Using a reverse proxy like Nginx can help to manage load balancing, serve static files, SSL processing, and more.
 
-6. Use Gzip Compression: Gzip compressing can greatly decrease the size of the response body and hence increase the speed of a web app.
+**6. Use Gzip Compression:** Gzip compressing can greatly decrease the size of the response body and hence increase the speed of a web app.
 
-7. Database Optimization: Use indexing, limit the result set, use database views, etc. to optimize database operations.
+**7. Database Optimization:** Use indexing, limit the result set, use database views, etc. to optimize database operations.
 
-8. Use Tools for Performance Tuning: Use tools like Node Clinic, Autocannon, v8-profiler to identify performance bottlenecks and optimize them.
+**8. Use Tools for Performance Tuning:** Use tools like Node Clinic, Autocannon, v8-profiler to identify performance bottlenecks and optimize them.
 
-9. Keep Node.js Up to Date: Newer versions of Node.js often include performance improvements, so it's a good idea to keep your Node.js version up to date.
+**9. Keep Node.js Up to Date:** Newer versions of Node.js often include performance improvements, so it's a good idea to keep your Node.js version up to date.
 
 
 
