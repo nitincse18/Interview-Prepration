@@ -20,6 +20,9 @@ Node.js uses an event-driven, non-blocking I/O model that allows it to handle la
 - Code is traversed line by line and actual value of variables are assigned to them.
 - A new ‘local’ execution context is created, when function ‘invocation’ is encountered. Again, two phase perform their role.
 
+
+![alt text](https://github.com/nitincse18/Interview-Prepration/blob/main/executionContext.png)
+
 #### Advantage:
 One of the main advantages of Node.js is that it allows developers to write server-side JavaScript code. This means that the same language can be used on both the front-end and back-end, which simplifies the development process and reduces the need to learn multiple programming languages.
 
