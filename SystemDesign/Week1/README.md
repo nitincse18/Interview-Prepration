@@ -112,7 +112,8 @@ Use distributed transactions to ensure atomicity and consistency across multiple
     - Use of quorum reads and writes in systems like Cassandra.
 
 - Eventual Consistency: Ensures that all nodes will eventually become consistent, suitable for high availability and partition tolerance.
-- Example: DynamoDB's eventual consistency model.
+- Example: 
+    - DynamoDB's eventual consistency model.
     - Causal Consistency: Ensures that operations that are causally related are seen by all nodes in the same order.
 
 - Example: 
@@ -158,10 +159,10 @@ This code snippet demonstrates using MongoDB transactions to ensure consistency 
 # Day 3-4: Database Concepts
 
 ## SQL vs NoSQL:
-
+  Definition: SQL databases are relational databases that use structured schemas to define data types and relationships.
 - Example: 
- - MongoDB for NoSQL:
-  Store unstructured data, such as user profiles or product catalog, in MongoDB.
+    - MongoDB for NoSQL:
+    - Store unstructured data, such as user profiles or product catalog, in MongoDB.
 
 Example:
 ```javascript
@@ -174,9 +175,10 @@ const User = mongoose.model('User', userSchema);
 ```
 
 ## ACID Properties:
-Example: Transactions in MongoDB:
-Ensure ACID properties for a sequence of operations.
-Example:
+- Example: 
+  - Transactions in MongoDB:
+  - Ensure ACID properties for a sequence of operations.
+- Example:
 ```javascript
 const session = await mongoose.startSession();
 session.startTransaction();

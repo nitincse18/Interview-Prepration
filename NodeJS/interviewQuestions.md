@@ -277,23 +277,152 @@ function perfectSquare (number) {
 ```
 
 ### 5. How do you handle asynchronous operations in Node.js?
-#### Example
-```
+#### To handle asynchronous operations in Node.js, you can use callbacks, promises, or async/await.
+1. Callbacks: Callbacks are a common way to handle asynchronous operations in Node.js. You pass a function as an argument to an asynchronous function, and that function gets called once the operation is complete. 
 
+- Example
+```javascript
+// Example using callbacks
+function fetchData(callback) {
+  setTimeout(() => {
+    const data = 'Some data';
+    callback(data);
+  }, 2000);
+}
 
+fetchData((data) => {
+  console.log(data);
+});
 ```
+- In this example, the fetchData function simulates an asynchronous operation using setTimeout. Once the operation is complete, it calls the callback function with the fetched data.
+
+2. Promises: Promises provide a more structured way to handle asynchronous operations. They allow you to chain multiple asynchronous operations together and handle success or failure using then and catch methods. 
+
+- Example:
+```javascript
+// Example using promises
+function fetchData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const data = 'Some data';
+      resolve(data);
+    }, 2000);
+  });
+}
+
+fetchData()
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+```
+- In this example, the fetchData function returns a promise that resolves with the fetched data. You can use the then method to handle the successful result and the catch method to handle any errors.
+
+3. Async/await: Async/await is a more recent addition to JavaScript and provides a more synchronous-looking way to handle asynchronous operations. It allows you to write asynchronous code that looks like synchronous code, making it easier to read and understand.
+
+- Example:
+```javascript
+// Example using async/await
+function fetchData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const data = 'Some data';
+      resolve(data);
+    }, 2000);
+  });
+}
+
+async function fetchDataAsync() {
+  try {
+    const data = await fetchData();
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+fetchDataAsync();
+```
+- In this example, the fetchDataAsync function is declared as async, allowing the use of the await keyword inside it. The await keyword pauses the execution of the function until the promise is resolved or rejected.
+
 ### 6. What is the purpose of the EventEmitter class in Node.js?
+
+#### The EventEmitter class in Node.js is used to handle events. You can create an event emitter instance and register multiple listener functions. When the EventEmitter object emits an event, all the functions attached to that event are called synchronously.
 #### Example
-```
+```javascript
+const EventEmitter = require('events');
 
+// Create an event emitter instance
+const myEmitter = new EventEmitter();
 
+// Register a listener
+myEmitter.on('event', function(a, b) {
+  console.log(a, b, this);
+});
+
+// Emit an event
+myEmitter.emit('event', 'a', 'b');
 ```
+- In this example, when the 'event' is emitted, the listener function is called with the arguments ('a', 'b').
+
+- The EventEmitter is a core part of many Node.js modules. For example, it's used in streams, HTTP servers, and many other places where you need to handle events.
+
 ### 7. How do you use streams in Node.js?
-#### Example
+#### Streams in Node.js are used to handle reading and writing data in a continuous manner. They are especially useful when dealing with large amounts of data, as they allow you to process data piece by piece, rather than loading the entire data into memory at once.
+
+- There are four types of streams in Node.js:
+
+- 1. Readable: For reading operation.
+- 2. Writable: For writing operation.
+- 3. Duplex: Can read and write.
+- 4. Transform: A type of duplex stream where the output is computed based on input.
+
+- Here's an example of how to use a Readable stream to read data from a file:
+```javascript
+const fs = require('fs');
+
+const readStream = fs.createReadStream('./largeFile.txt');
+
+readStream.on('data', (chunk) => {
+  console.log(`Received ${chunk.length} bytes of data.`);
+});
+
+readStream.on('end', () => {
+  console.log('There is no more data to read.');
+});
+```
+- In this example, fs.createReadStream is used to create a readable stream. This stream emits 'data' events as it reads data from the file. The 'end' event is emitted when there is no more data to read.
+
+- Here's an example of how to use a Writable stream to write data to a file:
+```javascript
+const fs = require('fs');
+
+const writeStream = fs.createWriteStream('./output.txt');
+
+writeStream.write('Hello, ');
+writeStream.write('World!\n');
+writeStream.end();
+```
+- In this example, fs.createWriteStream is used to create a writable stream. You can use the write method to write data to the stream, and the end method to signal that no more data will be written to the stream.
+
+- Streams can also be piped together. For example, you can create a readable stream and a writable stream, and then pipe the readable stream into the writable stream:
+
+```javascript
+const fs = require('fs');
+
+const readStream = fs.createReadStream('./largeFile.txt');
+const writeStream = fs.createWriteStream('./output.txt');
+
+readStream.pipe(writeStream);
 ```
 
+- In this example, data is read from largeFile.txt and written to output.txt. This is done piece by piece, allowing you to copy large files without consuming a lot of memory.
 
-```
+
+
+
 ### 8. What is the purpose of the module.exports object in Node.js?
 #### Example
 ```
