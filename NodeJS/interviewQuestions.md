@@ -3,6 +3,23 @@ Node.js is a free, open-source, cross-platform JavaScript runtime environment th
 
 Node.js uses an event-driven, non-blocking I/O model that allows it to handle large amounts of I/O-intensive tasks efficiently. This means that when a request is made, instead of blocking the thread and waiting for a response, Node.js will continue to process other requests, and when the response is ready, it will handle it asynchronously.
 
+### Everything in JS happens inside an Execution Context.
+**Execution Context:** Component where JS is executed. It has:
+- Memory or Variable Env.
+  Here variables are stored as key: value pair.
+- Code Env or Thread of execution
+  This is the place where code is executed one line at a time.
+
+**Note:** JavaScript is a synchronous single-thread language.
+  **1st Phase: Memory creation phase**
+- Everything happens in a ‘Global’ execution context.
+- In this phase, memory is allocated to all variables and function(s).
+- For variable(s), key is the variable name itself and value is undefined (even if the variable is initialized). And, for function(s), key is the function name and value is body of the code.
+
+  **2nd Phase: Code Execution phase**
+- Code is traversed line by line and actual value of variables are assigned to them.
+- A new ‘local’ execution context is created, when function ‘invocation’ is encountered. Again, two phase perform their role.
+
 #### Advantage:
 One of the main advantages of Node.js is that it allows developers to write server-side JavaScript code. This means that the same language can be used on both the front-end and back-end, which simplifies the development process and reduces the need to learn multiple programming languages.
 
