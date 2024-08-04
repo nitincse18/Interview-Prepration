@@ -1,7 +1,11 @@
-# The SOLID principles are a set of design principles that help developers create more maintainable and scalable software. These principles can be applied in any object-oriented programming language, including JavaScript. Here's an example of each SOLID principle in JavaScript:
+# SOLID Principle
+
+## The SOLID principles are a set of design principles that help developers create more maintainable and scalable software. These principles can be applied in any object-oriented programming language, including JavaScript. 
+
+Here's an example of each SOLID principle in JavaScript
 
 ## Single Responsibility Principle (SRP)
-    A class should have only one reason to change, meaning it should only have one job or responsibility.
+A class should have only one reason to change, meaning it should only have one job or responsibility.
 
 ```javascript
 
@@ -30,7 +34,7 @@ class UserNotifier {
 ```
 
 ## Open/Closed Principle (OCP)
-    Software entities should be open for extension but closed for modification.
+Software entities should be open for extension but closed for modification.
 
 ```javascript
 
@@ -69,7 +73,7 @@ console.log(totalArea);
 ```
 
 ## Liskov Substitution Principle (LSP)
-    Objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program.
+Objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program.
 
 ```javascript
 
@@ -99,7 +103,7 @@ makeBirdFly(ostrich); // Throws error
 ```
 
 ## Interface Segregation Principle (ISP)
-    Clients should not be forced to depend on interfaces they do not use.
+Clients should not be forced to depend on interfaces they do not use.
 
 ```javascript
 
@@ -140,7 +144,7 @@ multiFunctionDevice.scan();
 
 
 ## Dependency Inversion Principle (DIP)
-    High-level modules should not depend on low-level modules. Both should depend on abstractions.
+High-level modules should not depend on low-level modules. Both should depend on abstractions.
 
 ```javascript
 
